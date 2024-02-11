@@ -13,7 +13,7 @@ public class StudentController {
 
     @GetMapping("/students")
     public String listStudent(Model model){
-        model.addAttribute("student",studentService.getAllStudents());
+        model.addAttribute("students",studentService.getAllStudents());
         return "students";
 
 

@@ -11,10 +11,18 @@ import java.util.List;
 @AllArgsConstructor
 public class StudentServiceImpl implements StudentService {
 
-    private  final StudentRepository studentRepository ;
+    private final StudentRepository studentRepository;
+
     @Override
     public List<Student> getAllStudents() {
         return studentRepository.findAll();
 
     }
+
+    @Override
+    public Student saveStudent(Student student) {
+        return studentRepository.save(student);
+
+    }
+
 }

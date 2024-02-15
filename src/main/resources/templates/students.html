@@ -14,7 +14,7 @@
     <!-- Brand -->
     <a class="navbar-brand" href="#">Student Management System</a>
 
-    <!-- Toggler/collapsibe Button -->
+
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -25,9 +25,7 @@
             <li class="nav-item">
                 <a class="nav-link" th:href="@{/students}">Student Management</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" th:href="@{/students}">Teacher Management</a>
-            </li>
+
         </ul>
     </div>
 </nav>
@@ -63,6 +61,10 @@
             <td>
                 <a th:href="@{/student/edit/{id}(id=${student.getId()})}"
                    class="btn btn-primary"> Update</a>
+
+                <a th:href="@{/student/{id}(id=${student.getId()})}"
+                   class="btn btn-danger"> delete</a>
+
             </td>
 
         </tr>
